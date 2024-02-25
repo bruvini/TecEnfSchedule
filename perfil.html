@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil do Funcionário</title>
+    <link rel="stylesheet" href="perfil.css"> <!-- Adapte o caminho conforme necessário -->
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="setores.html">Setores</a></li>
+            <li><a href="funcionarios.html">Funcionários</a></li>
+            <li><a href="gerar_escala.html">Gerar Escala</a></li>
+            <li><a href="perfil.html" class="active">Meu Perfil</a></li>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <div id="formPerfil" class="perfil-container">
+            <h2>Perfil do Funcionário</h2>
+            <form id="perfilForm">
+                <div class="inputContainer">
+                    <label for="perfilFoto">Foto:</label>
+                    <input type="file" id="perfilFoto" accept="image/*">
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilNome">Nome:</label>
+                    <input type="text" id="perfilNome">
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilEmail">Email:</label>
+                    <input type="email" id="perfilEmail">
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilSenha">Senha:</label>
+                    <input type="password" id="perfilSenha">
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilMatricula">Matrícula:</label>
+                    <input type="text" id="perfilMatricula" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilEntrada">Horário de Entrada:</label>
+                    <input type="time" id="perfilEntrada" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilSaida">Horário de Saída:</label>
+                    <input type="time" id="perfilSaida" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilAlmoco">Horário Almoço:</label>
+                    <input type="time" id="perfilAlmoco" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilDuracaoAlmoco">Duração do Almoço (min):</label>
+                    <input type="number" id="perfilDuracaoAlmoco" readonly>
+                </div>
+                <div class="inputContainer">
+                    <label for="perfilTipo">Tipo de Funcionário:</label>
+                    <input type="text" id="perfilTipo" readonly>
+                </div>
+                <div class="actionContainer">
+                    <button type="submit">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="perfil.js"></script> <!-- Adapte o caminho conforme necessário -->
+</body>
+</html>

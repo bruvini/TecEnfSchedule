@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <title>Funcionários</title>
     <link rel="stylesheet" href="funcionarios.css" />
-    <script src="funcionarios.js" defer></script>
   </head>
   <body>
     <header>
@@ -12,59 +11,64 @@
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="setores.html">Setores</a></li>
-          <li><a href="funcionarios.html">Funcionários</a></li>
+          <li><a href="funcionarios.html" class="active">Funcionários</a></li>
           <li><a href="gerar_escala.html">Gerar Escala</a></li>
+          <li><a href="perfil.html">Meu Perfil</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div id="formFuncionario">
-        <h2>Adicionar Funcionário</h2>
-        <label for="nomeFuncionario">Nome do Funcionário:</label>
-        <input
-          type="text"
-          id="nomeFuncionario"
-          placeholder="Nome do Funcionário"
-          required
-        />
-
-        <label for="entradaFuncionario">Hora de Entrada:</label>
-        <input type="time" id="entradaFuncionario" required />
-
-        <label for="saidaFuncionario">Hora de Saída:</label>
-        <input type="time" id="saidaFuncionario" required />
-
-        <label for="inicioAlmocoFuncionario">Horário Almoço:</label>
-        <input type="time" id="inicioAlmocoFuncionario" required />
-
-        <label for="duracaoAlmocoFuncionario">Duração do Almoço (min):</label>
-        <input
-          type="number"
-          id="duracaoAlmocoFuncionario"
-          placeholder="Duração do Almoço (min)"
-          required
-        />
-
-        <label for="fotoFuncionario">Foto do Funcionário:</label>
-        <input type="file" id="fotoFuncionario" accept="image/*" />
-
-        <button onclick="adicionarFuncionario()">Adicionar Funcionário</button>
+      <div id="cardsContainer"></div>
+      <!-- Janela Modal para Detalhes do Funcionário -->
+      <div id="modalFuncionario" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div
+            id="modalFoto"
+            class="funcionario-foto"
+            style="margin: auto"
+          ></div>
+          <form id="formDetalhesFuncionario">
+            <div class="inputContainer">
+              <label for="modalNomeFuncionario">Nome:</label>
+              <input type="text" id="modalNomeFuncionario" readonly />
+            </div>
+            <div class="inputContainer">
+              <label for="modalMatriculaFuncionario">Matrícula:</label>
+              <input type="text" id="modalMatriculaFuncionario" readonly />
+            </div>
+            <div class="inputContainer">
+              <label for="modalEntradaFuncionario">Horário de Entrada:</label>
+              <input type="time" id="modalEntradaFuncionario" />
+            </div>
+            <div class="inputContainer">
+              <label for="modalSaidaFuncionario">Horário de Saída:</label>
+              <input type="time" id="modalSaidaFuncionario" />
+            </div>
+            <div class="inputContainer">
+              <label for="modalAlmocoFuncionario">Horário Almoço:</label>
+              <input type="time" id="modalAlmocoFuncionario" />
+            </div>
+            <div class="inputContainer">
+              <label for="modalDuracaoAlmocoFuncionario"
+                >Duração do Almoço (min):</label
+              >
+              <input type="number" id="modalDuracaoAlmocoFuncionario" />
+            </div>
+            <div class="inputContainer">
+              <label for="modalTipoFuncionario">Tipo de Funcionário:</label>
+              <select id="modalTipoFuncionario">
+                <option value="Funcionário">Funcionário</option>
+                <option value="Coordenação">Coordenação</option>
+                <option value="Desenvolvedor">Desenvolvedor</option>
+              </select>
+            </div>
+            <button type="button" id="salvarDetalhesBtn">Salvar</button>
+            <button type="button" id="excluirFuncionarioBtn">Excluir</button>
+          </form>
+        </div>
       </div>
-      <table id="tabelaFuncionarios">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Hora de Entrada</th>
-            <th>Hora de Saída</th>
-            <th>Horário Almoço</th>
-            <th>Duração do Almoço</th>
-            <th>Ações</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Linhas a serem preenchidas com JS -->
-        </tbody>
-      </table>
     </main>
+    <script src="funcionarios.js" defer></script>
   </body>
 </html>

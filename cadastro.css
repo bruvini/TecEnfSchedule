@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#formCadastro {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+}
+
+#formCadastro h2 {
+    margin-top: 0;
+}
+
+#formCadastro label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#formCadastro input[type="text"],
+#formCadastro input[type="email"],
+#formCadastro input[type="number"],
+#formCadastro input[type="password"],
+#formCadastro input[type="file"],
+#formCadastro select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#formCadastro input[type="file"] {
+    background-color: #f1f1f1;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    width: calc(100% - 22px); /* Ajusta a largura considerando padding e borda */
+    cursor: pointer;
+}
+
+#formCadastro input[type="file"]::file-selector-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#formCadastro input[type="file"]:hover::file-selector-button {
+    background-color: #0056b3;
+}
+
+#formCadastro button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#formCadastro button:hover {
+    background-color: #0056b3;
+}

@@ -30,130 +30,135 @@ nav ul li a {
 
 main {
     padding: 20px;
-    text-align: center;
-}
-
-#formFuncionario {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
     text-align: left;
 }
 
-#formFuncionario h2 {
-    margin-top: 0;
+#cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
-#formFuncionario label {
-    display: block;
-    margin-top: 20px;
-    font-weight: bold;
+.funcionario-card {
+    width: calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
 }
 
-#formFuncionario input[type="file"] {
+.funcionario-foto {
+    width: 100px;
+    height: 100px;
     background-color: #f1f1f1;
-    border: 2px dashed #ccc;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.funcionario-info {
+    flex-grow: 1;
+}
+
+.funcionario-info div {
+    margin-bottom: 10px;
+}
+
+/* Estilo da Janela Modal */
+.modal {
+    display: none;
+    /* Oculta por padrão */
+    position: fixed;
+    /* Fica fixa na tela */
+    z-index: 1;
+    /* Fica na frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Largura total */
+    height: 100%;
+    /* Altura total */
+    overflow: auto;
+    /* Habilita a rolagem se necessário */
+    background-color: rgb(0, 0, 0);
+    /* Cor de fundo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Cor de fundo com opacidade */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    margin: 5% auto; /* Ajuste para melhor visualização na tela */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Ajuste para um tamanho mais adequado */
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content button {
+    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
     padding: 10px;
     margin-top: 10px;
-    width: calc(100% - 22px);
-    /* Ajusta a largura considerando padding e borda */
-    cursor: pointer;
-}
-
-#formFuncionario input[type="file"]::file-selector-button {
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
     background-color: #007bff;
     color: white;
-    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-#formFuncionario input[type="file"]:hover::file-selector-button {
+.modal-content button:hover {
     background-color: #0056b3;
 }
 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
 
-#formFuncionario input[type="text"],
-#formFuncionario input[type="time"],
-#formFuncionario input[type="number"],
-#formFuncionario select {
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inputContainer {
+    margin-bottom: 15px;
+}
+
+.inputContainer label {
+    font-weight: bold;
+}
+
+.inputContainer input[type="text"],
+.inputContainer input[type="time"],
+.inputContainer input[type="number"],
+.inputContainer select {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
-#formFuncionario button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
+.actionContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-#formFuncionario button:hover {
-    background-color: #0056b3;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-table,
-th,
-td {
-    border: 1px solid #ddd;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-tr:hover {
-    background-color: #ddd;
-}
-
-button {
-    cursor: pointer;
-}
-
-.editBtn,
-.deleteBtn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.editBtn {
-    background-color: #ffc107;
-    color: #fff;
-}
-
-.deleteBtn {
-    background-color: #dc3545;
-    color: #fff;
+.actionContainer button {
+    flex-grow: 1;
 }
