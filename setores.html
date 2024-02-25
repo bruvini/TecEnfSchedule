@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Setores</title>
+    <link rel="stylesheet" href="setores.css">
+    <script src="setores.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="setores.html">Setores</a></li>
+                <li><a href="funcionarios.html">Funcionários</a></li>
+                <li><a href="gerar_escala.html">Gerar Escala</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="formSetor">
+            <h2>Adicionar Setor</h2>
+            <input type="text" id="nomeSetor" placeholder="Nome do Setor">
+            <input type="time" id="inicioFuncionamentoSetor">
+            <input type="time" id="terminoFuncionamentoSetor">
+            <select id="setorPrioritario">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+            <button onclick="adicionarSetor()">Adicionar Setor</button>
+        </div>
+        <table id="tabelaSetores">
+            <thead>
+                <tr>
+                    <th>Nome do Setor</th>
+                    <th>Horário de Início</th>
+                    <th>Horário de Término</th>
+                    <th>Prioritário</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas a serem preenchidas com JS -->
+            </tbody>
+        </table>
+        
+    </main>
+</body>
+</html>

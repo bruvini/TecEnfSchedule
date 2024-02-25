@@ -1,0 +1,183 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0px;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#selecaoFuncionarios {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Continua evitando quebra de linha */
+    overflow-x: scroll;
+    /* Garante o scroll horizontal */
+    gap: 15px;
+    /* Mantém um espaço entre os cards */
+    align-items: center;
+    /* Centraliza os cards verticalmente */
+    justify-content: flex-start;
+    /* Alinha os cards à esquerda */
+    padding: 20px 0;
+    scroll-snap-type: x mandatory;
+    /* Facilita o alinhamento dos cards ao scrollar */
+}
+
+.funcionario-card {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 125px;
+    height: 110px;
+    /* Ajustado para melhor acomodação */
+    margin: 0 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 15px;
+    /* Espaço abaixo de cada card */
+}
+
+.funcionario-card.selected {
+    box-shadow: 0 0 15px #007bff;
+}
+
+.funcionario-foto {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 10px auto 5px;
+}
+
+.funcionario-nome {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+#gerarEscala {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    /* Auto-ajuste à largura do conteúdo */
+    margin: 20px auto;
+    /* Centraliza o botão */
+}
+
+#gerarEscala:hover {
+    background-color: #0056b3;
+}
+
+#escalaGerada {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Cor de fundo para linhas alternadas */
+}
+
+/* Estiliza o cabeçalho da tabela (dias da semana) */
+thead th {
+    position: sticky;
+    top: 0;
+    /* Faz o cabeçalho ficar fixo ao rolar a tabela */
+    z-index: 1;
+}
+
+.escala-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dia-escala {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.turno {
+    padding: 5px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Para interação de arrastar e soltar */
+}
+
+.funcionario-escala {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Pronto para interações de arrastar e soltar */
+}

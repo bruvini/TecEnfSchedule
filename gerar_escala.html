@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gerador de Escalas</title>
+    <link rel="stylesheet" href="gerar_escala.css" />
+    <script src="gerar_escala.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="setores.html">Setores</a></li>
+          <li><a href="funcionarios.html">Funcionários</a></li>
+          <li><a href="gerar_escala.html">Gerar Escala</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Gerador de Escalas</h1>
+      <p>
+        Selecione os funcionários que devem ser considerados na geração da
+        escala e clique em "Gerar Escala".
+      </p>
+      <div id="selecaoFuncionarios">
+        <!-- Funcionários serão listados aqui -->
+      </div>
+      <button id="gerarEscala">Gerar Escala</button>
+      <div id="escalaGerada">
+        <!-- A escala gerada será exibida aqui -->
+      </div>
+    </main>
+  </body>
+</html>
