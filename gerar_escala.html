@@ -32,6 +32,29 @@
       <div id="selecaoFuncionarios">
         <!-- Funcionários serão listados aqui -->
       </div>
+
+      <div class="selecao-escala-container">
+        <label for="tipoEscala">Selecione o tipo de escala:</label>
+        <select id="tipoEscala">
+          <option value="diaria">Diária</option>
+          <option value="semanal">Semanal</option>
+          <option value="mensal" disabled>Mensal (Em breve)</option>
+        </select>
+      </div>
+
+      <div class="inputContainer">
+        <label for="dataEscala">Data da Escala:</label>
+        <input type="date" id="dataEscala" />
+      </div>
+
+      <div id="setoresContainer"></div>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.2/dragula.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
   </body>
 </html>

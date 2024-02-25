@@ -76,3 +76,95 @@ main {
     font-size: 14px;
     color: #333;
 }
+
+
+.selecao-escala-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+}
+
+.selecao-escala-container label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#tipoEscala {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#setoresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.setor {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nomeSetor {
+    font-size: 14px;
+    color: #aaa; /* Mais fraquinha */
+    margin-bottom: 15px; /* Espaço antes da linha do tempo */
+  }
+
+.linhaDoTempo {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    height: 100px;
+    background-color: #e1e1e1;
+}
+
+.hora {
+    flex-grow: 1;
+    border-left: 1px solid #ccc;
+    pointer-events: none; /* Impede que as linhas sejam clicáveis ou arrastáveis */
+}
+
+.hora::before {
+  content: attr(data-hora); /* Exibe a hora */
+  position: absolute;
+  top: -20px; /* Posiciona acima da linha do tempo */
+  font-size: 10px; /* Menor e mais fraquinha */
+  color: #888;
+}
+
+.hora:first-child {
+    border-left: none;
+}
+
+.inputContainer {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer label {
+    margin-right: 10px;
+}
+
+.inputContainer input[type="date"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.funcionario-card.naLinhaDoTempo {
+    position: absolute;
+    height: 20px; /* Altura do card na linha do tempo */
+    background-color: #007bff; /* Ou qualquer outra cor */
+    color: white; /* Cor do texto dentro do card */
+    text-align: center; /* Centraliza o texto */
+    line-height: 20px; /* Alinha o texto verticalmente */
+    z-index: 10; /* Garante que o card fique por cima das linhas */
+  }
