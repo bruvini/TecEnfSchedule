@@ -16,13 +16,20 @@ function listarFuncionarios() {
   const funcionarios = JSON.parse(localStorage.getItem("funcionarios")) || [];
   const selecaoFuncionarios = document.getElementById("selecaoFuncionarios");
 
-  funcionarios.forEach((funcionario, index) => {
-    // Adicione o index aqui
+  funcionarios.forEach((funcionario) => {
     const card = document.createElement("div");
     card.classList.add("funcionario-card");
+
     const foto = document.createElement("div");
     foto.classList.add("funcionario-foto");
-    // foto.style.backgroundImage = `url(${funcionario.fotoURL})`; // Quando você tiver fotos
+    if (funcionario.fotoBase64) {
+      foto.style.backgroundImage = `url(${funcionario.fotoBase64})`;
+      foto.style.backgroundSize = 'cover';
+      foto.style.backgroundPosition = 'center';
+    } else {
+      // Se não tiver foto, pode optar por não mostrar nada ou adicionar um placeholder
+      foto.style.backgroundColor = gerarCorPastel();
+    }
 
     const nome = document.createElement("span");
     nome.classList.add("funcionario-nome");
@@ -33,10 +40,17 @@ function listarFuncionarios() {
 
     card.addEventListener("click", function () {
       this.classList.toggle("selected");
-      // Aqui você pode adicionar ou remover o funcionário de uma lista de selecionados
     });
     selecaoFuncionarios.appendChild(card);
   });
+}
+
+function gerarCorPastel() {
+  const base = 100; // Valor mínimo para garantir cores claras
+  const red = base + Math.floor(Math.random() * (255 - base));
+  const green = base + Math.floor(Math.random() * (255 - base));
+  const blue = base + Math.floor(Math.random() * (255 - base));
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 function atualizarContadorEscalas() {

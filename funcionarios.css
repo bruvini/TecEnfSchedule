@@ -38,7 +38,7 @@ main {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: left;
 }
@@ -46,6 +46,37 @@ main {
 #formFuncionario h2 {
     margin-top: 0;
 }
+
+#formFuncionario label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#formFuncionario input[type="file"] {
+    background-color: #f1f1f1;
+    border: 2px dashed #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    width: calc(100% - 22px);
+    /* Ajusta a largura considerando padding e borda */
+    cursor: pointer;
+}
+
+#formFuncionario input[type="file"]::file-selector-button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#formFuncionario input[type="file"]:hover::file-selector-button {
+    background-color: #0056b3;
+}
+
 
 #formFuncionario input[type="text"],
 #formFuncionario input[type="time"],
@@ -67,6 +98,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #formFuncionario button:hover {
@@ -79,11 +111,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 8px;
 }

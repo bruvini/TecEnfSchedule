@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Funcionários</title>
-    <link rel="stylesheet" href="funcionarios.css">
+    <link rel="stylesheet" href="funcionarios.css" />
     <script src="funcionarios.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="setores.html">Setores</a></li>
-                <li><a href="funcionarios.html">Funcionários</a></li>
-                <li><a href="gerar_escala.html">Gerar Escala</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="setores.html">Setores</a></li>
+          <li><a href="funcionarios.html">Funcionários</a></li>
+          <li><a href="gerar_escala.html">Gerar Escala</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="formFuncionario">
-            <h2>Adicionar Funcionário</h2>
-            <input type="text" id="nomeFuncionario" placeholder="Nome do Funcionário">
-            <input type="time" id="entradaFuncionario" placeholder="Hora de Entrada">
-            <input type="time" id="saidaFuncionario" placeholder="Hora de Saída">
-            <input type="time" id="inicioAlmocoFuncionario" placeholder="Horário Almoço">
-            <input type="number" id="duracaoAlmocoFuncionario" placeholder="Duração do Almoço (min)">
-            <button onclick="adicionarFuncionario()">Adicionar Funcionário</button>
-        </div>
-        <table id="tabelaFuncionarios">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Hora de Entrada</th>
-                    <th>Hora de Saída</th>
-                    <th>Horário Almoço</th>
-                    <th>Duração do Almoço</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Linhas a serem preenchidas com JS -->
-            </tbody>
-        </table>
+      <div id="formFuncionario">
+        <h2>Adicionar Funcionário</h2>
+        <label for="nomeFuncionario">Nome do Funcionário:</label>
+        <input
+          type="text"
+          id="nomeFuncionario"
+          placeholder="Nome do Funcionário"
+          required
+        />
+
+        <label for="entradaFuncionario">Hora de Entrada:</label>
+        <input type="time" id="entradaFuncionario" required />
+
+        <label for="saidaFuncionario">Hora de Saída:</label>
+        <input type="time" id="saidaFuncionario" required />
+
+        <label for="inicioAlmocoFuncionario">Horário Almoço:</label>
+        <input type="time" id="inicioAlmocoFuncionario" required />
+
+        <label for="duracaoAlmocoFuncionario">Duração do Almoço (min):</label>
+        <input
+          type="number"
+          id="duracaoAlmocoFuncionario"
+          placeholder="Duração do Almoço (min)"
+          required
+        />
+
+        <label for="fotoFuncionario">Foto do Funcionário:</label>
+        <input type="file" id="fotoFuncionario" accept="image/*" />
+
+        <button onclick="adicionarFuncionario()">Adicionar Funcionário</button>
+      </div>
+      <table id="tabelaFuncionarios">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Hora de Entrada</th>
+            <th>Hora de Saída</th>
+            <th>Horário Almoço</th>
+            <th>Duração do Almoço</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Linhas a serem preenchidas com JS -->
+        </tbody>
+      </table>
     </main>
-</body>
+  </body>
 </html>
