@@ -17,7 +17,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 350px;
     /* Ajustado para uma largura que se adeque bem ao formulário */
-    text-align: left;
+    text-align: center;
     /* Alinhamento do texto à esquerda para seguir o padrão */
 }
 
@@ -26,6 +26,14 @@ body {
     text-align: center;
     /* Centraliza o título para um visual mais limpo */
 }
+
+#logoImage {
+    max-width: 120px; /* Ajuste conforme necessário para o tamanho adequado */
+    margin-bottom: 20px; /* Espaço entre a imagem e o título "Login" */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor da imagem */
+    border-radius: 4px; /* Opcional: adiciona bordas arredondadas à imagem */
+  }
+  
 
 .inputContainer {
     margin: 10px 0;

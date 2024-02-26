@@ -6,34 +6,52 @@ body {
     text-align: center;
 }
 
-header, footer {
+header {
     background-color: #007bff;
     color: white;
     padding: 20px 0;
-    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adiciona padding nas laterais do nav */
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style-type: none;
+    flex-grow: 1; /* Faz a lista ocupar o máximo de espaço possível */
     padding: 0;
+    margin: 0;
+}
+
+nav ul .logo {
+    flex-grow: 0; /* Impede que a logo cresça */
+    margin-right: auto; /* Empurra tudo para a direita da logo */
+}
+
+nav ul .logo img {
+    height: 40px; /* Ajuste conforme necessário para o tamanho da logo */
 }
 
 nav ul li {
-    margin: 0 15px;
+    list-style: none; /* Remove estilos padrão da lista */
+    margin: 0 10px; /* Espaçamento horizontal entre os itens */
 }
 
 nav ul li.logout {
-    margin-left: auto;
+    margin-left: auto; /* Isso empurra o botão de logout para a direita */
 }
 
-nav ul li a, nav ul li a.active {
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
+
 
 main {
     padding: 20px;
