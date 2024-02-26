@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -15,37 +15,46 @@ body {
     margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px; /* Ajustado para uma largura que se adeque bem ao formulário */
-    text-align: left; /* Alinhamento do texto à esquerda para seguir o padrão */
+    width: 350px;
+    /* Ajustado para uma largura que se adeque bem ao formulário */
+    text-align: left;
+    /* Alinhamento do texto à esquerda para seguir o padrão */
 }
 
 #loginContainer h2 {
     margin-top: 0;
-    text-align: center; /* Centraliza o título para um visual mais limpo */
+    text-align: center;
+    /* Centraliza o título para um visual mais limpo */
 }
 
 .inputContainer {
-    margin: 10px 0; /* Ajusta a margem para um espaçamento consistente */
+    margin: 10px 0;
+    /* Ajusta a margem para um espaçamento consistente */
 }
 
 .inputContainer label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold; /* Torna a label negrito */
+    font-weight: bold;
+    /* Torna a label negrito */
 }
 
 .inputContainer input {
     width: 100%;
     padding: 10px;
-    margin: 5px 0; /* Ajuste na margem para espaçamento vertical */
+    margin: 5px 0;
+    /* Ajuste na margem para espaçamento vertical */
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-sizing: border-box; /* Garante que padding não afete a largura total */
+    box-sizing: border-box;
+    /* Garante que padding não afete a largura total */
 }
 
 .actionContainer {
-    margin-top: 20px; /* Espaço antes dos botões */
-    text-align: center; /* Botões centralizados */
+    margin-top: 20px;
+    /* Espaço antes dos botões */
+    text-align: center;
+    /* Botões centralizados */
 }
 
 .actionContainer button {
@@ -55,7 +64,8 @@ body {
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-    display: inline-block; /* Permite que os botões fiquem lado a lado */
+    display: inline-block;
+    /* Permite que os botões fiquem lado a lado */
 }
 
 #loginBtn {
@@ -64,7 +74,8 @@ body {
 }
 
 #loginBtn:hover {
-    background-color: #0056b3; /* Efeito hover para o botão de login */
+    background-color: #0056b3;
+    /* Efeito hover para o botão de login */
 }
 
 #registerBtn {
@@ -73,5 +84,6 @@ body {
 }
 
 #registerBtn:hover {
-    background-color: #1e7a33; /* Efeito hover para o botão de cadastro */
+    background-color: #1e7a33;
+    /* Efeito hover para o botão de cadastro */
 }

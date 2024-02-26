@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -18,7 +18,8 @@ nav ul {
 }
 
 nav ul li.logout {
-    margin-left: auto; /* Isso empurra o botão de logout para a direita */
+    margin-left: auto;
+    /* Isso empurra o botão de logout para a direita */
 }
 
 nav ul li {
@@ -42,7 +43,7 @@ main {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
     text-align: left;
 }
@@ -82,11 +83,14 @@ table {
     margin-top: 20px;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     text-align: left;
     padding: 8px;
 }

@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Sistema de Escalas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li><a href="index.html" class="active">Início</a></li>
-            <li><a href="setores.html">Setores</a></li>
-            <li><a href="funcionarios.html">Funcionários</a></li>
-            <li><a href="gerar_escala.html">Gerar Escala</a></li>
-            <li><a href="perfil.html">Meu Perfil</a></li>
-            <li class="logout"><a href="#" id="logoutBtn">Sair</a></li>
-          </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Início</a></li>
+          <li><a href="setores.html">Setores</a></li>
+          <li><a href="funcionarios.html">Funcionários</a></li>
+          <li><a href="gerar_escala.html">Gerar Escala</a></li>
+          <li><a href="perfil.html">Meu Perfil</a></li>
+          <li class="logout"><a href="#" id="logoutBtn">Sair</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <h1>Bem-vindo ao Sistema de Escalas, <span id="nomeUsuario"></span></h1>
-        <div class="cards">
-            <div class="card">
-                <h2>Setores Cadastrados</h2>
-                <p id="setoresCadastrados">0</p>
-            </div>
-            <div class="card">
-                <h2>Funcionários Cadastrados</h2>
-                <p id="funcionariosCadastrados">0</p>
-            </div>
-            <div class="card">
-                <h2>Escalas Geradas</h2>
-                <p id="escalasGeradas">0</p>
-            </div>
+      <h1>Bem-vindo ao Sistema de Escalas, <span id="nomeUsuario"></span></h1>
+      <div class="cards">
+        <div class="card" data-card="setores">
+          <h2>Setores Cadastrados</h2>
+          <p id="setoresCadastrados">0</p>
         </div>
+        <div class="card" data-card="funcionarios">
+          <h2>Funcionários Cadastrados</h2>
+          <p id="funcionariosCadastrados">0</p>
+        </div>
+        <div class="card" data-card="escalas">
+          <h2>Escalas Geradas</h2>
+          <p id="escalasGeradas">0</p>
+        </div>
+      </div>
     </main>
     <footer>
-        <p>© <span id="anoAtual"></span> Enfermeiro Bruno - Todos os direitos reservados.</p>
+      <p>
+        © <span id="anoAtual"></span> Enfermeiro Bruno - Todos os direitos
+        reservados.
+      </p>
     </footer>
-</body>
+  </body>
 </html>

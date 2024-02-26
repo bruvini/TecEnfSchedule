@@ -1,33 +1,35 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    text-align: center;
 }
 
-header {
+header, footer {
     background-color: #007bff;
     color: white;
     padding: 20px 0;
+    text-align: center;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-nav ul li.logout {
-    margin-left: auto; /* Isso empurra o botão de logout para a direita */
+    list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
-nav ul li a,
-nav ul li a.active {
+nav ul li.logout {
+    margin-left: auto;
+}
+
+nav ul li a, nav ul li a.active {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -35,7 +37,6 @@ nav ul li a.active {
 
 main {
     padding: 20px;
-    text-align: center;
 }
 
 .perfil-container {
@@ -44,70 +45,69 @@ main {
     margin: 20px auto;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    text-align: left;
-    max-width: 500px; /* Ajustado para acomodar melhor os campos do perfil */
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.perfil-container h2 {
-    margin-top: 0;
+.fotoPerfilContainer img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 
 .inputContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-bottom: 15px;
 }
 
 .inputContainer label {
-    display: block;
-    margin-bottom: 5px;
     font-weight: bold;
+    flex-basis: 30%;
+    text-align: left;
 }
 
-.inputContainer input[type="text"],
-.inputContainer input[type="email"],
-.inputContainer input[type="number"],
-.inputContainer input[type="password"],
-.inputContainer input[type="file"],
-.inputContainer select,
-.inputContainer input[type="time"] {
-    width: 100%;
+.inputContainer input, .inputContainer select {
+    flex: 1;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    box-sizing: border-box;
+    width: 65%; /* Ajuste de largura para alinhamento */
 }
 
-.inputContainer input[type="file"] {
-    background-color: #f1f1f1;
-    border: 2px dashed #ccc;
-    padding: 10px;
-    cursor: pointer;
+.inputContainer input[readonly], .inputContainer select[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
 }
 
-.inputContainer input[type="file"]::file-selector-button {
-    padding: 10px 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-.inputContainer input[type="file"]:hover::file-selector-button {
-    background-color: #0056b3;
+.actionContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .actionContainer button {
-    width: 100%;
-    padding: 10px;
+    padding: 10px 15%;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
 }
 
 .actionContainer button:hover {
     background-color: #0056b3;
+}
+
+footer p {
+    margin: 0;
 }

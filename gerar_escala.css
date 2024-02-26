@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -18,7 +18,8 @@ nav ul {
 }
 
 nav ul li.logout {
-    margin-left: auto; /* Isso empurra o botão de logout para a direita */
+    margin-left: auto;
+    /* Isso empurra o botão de logout para a direita */
 }
 
 nav ul li {
@@ -117,9 +118,11 @@ main {
 
 .nomeSetor {
     font-size: 14px;
-    color: #aaa; /* Mais fraquinha */
-    margin-bottom: 15px; /* Espaço antes da linha do tempo */
-  }
+    color: #aaa;
+    /* Mais fraquinha */
+    margin-bottom: 15px;
+    /* Espaço antes da linha do tempo */
+}
 
 .linhaDoTempo {
     display: flex;
@@ -132,15 +135,19 @@ main {
 .hora {
     flex-grow: 1;
     border-left: 1px solid #ccc;
-    pointer-events: none; /* Impede que as linhas sejam clicáveis ou arrastáveis */
+    pointer-events: none;
+    /* Impede que as linhas sejam clicáveis ou arrastáveis */
 }
 
 .hora::before {
-  content: attr(data-hora); /* Exibe a hora */
-  position: absolute;
-  top: -20px; /* Posiciona acima da linha do tempo */
-  font-size: 10px; /* Menor e mais fraquinha */
-  color: #888;
+    content: attr(data-hora);
+    /* Exibe a hora */
+    position: absolute;
+    top: -20px;
+    /* Posiciona acima da linha do tempo */
+    font-size: 10px;
+    /* Menor e mais fraquinha */
+    color: #888;
 }
 
 .hora:first-child {
@@ -165,10 +172,16 @@ main {
 
 .funcionario-card.naLinhaDoTempo {
     position: absolute;
-    height: 20px; /* Altura do card na linha do tempo */
-    background-color: #007bff; /* Ou qualquer outra cor */
-    color: white; /* Cor do texto dentro do card */
-    text-align: center; /* Centraliza o texto */
-    line-height: 20px; /* Alinha o texto verticalmente */
-    z-index: 10; /* Garante que o card fique por cima das linhas */
-  }
+    height: 20px;
+    /* Altura do card na linha do tempo */
+    background-color: #007bff;
+    /* Ou qualquer outra cor */
+    color: white;
+    /* Cor do texto dentro do card */
+    text-align: center;
+    /* Centraliza o texto */
+    line-height: 20px;
+    /* Alinha o texto verticalmente */
+    z-index: 10;
+    /* Garante que o card fique por cima das linhas */
+}

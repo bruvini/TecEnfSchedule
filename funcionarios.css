@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: "Rubik", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -18,7 +18,8 @@ nav ul {
 }
 
 nav ul li.logout {
-    margin-left: auto; /* Isso empurra o botão de logout para a direita */
+    margin-left: auto;
+    /* Isso empurra o botão de logout para a direita */
 }
 
 nav ul li {
@@ -100,16 +101,19 @@ main {
 .modal-content {
     background-color: #fefefe;
     padding: 20px;
-    margin: 5% auto; /* Ajuste para melhor visualização na tela */
+    margin: 5% auto;
+    /* Ajuste para melhor visualização na tela */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%; /* Ajuste para um tamanho mais adequado */
+    width: 50%;
+    /* Ajuste para um tamanho mais adequado */
     display: flex;
     flex-direction: column;
 }
 
 .modal-content button {
-    width: calc(100% - 20px); /* Ajusta a largura considerando o padding */
+    width: calc(100% - 20px);
+    /* Ajusta a largura considerando o padding */
     padding: 10px;
     margin-top: 10px;
     background-color: #007bff;
