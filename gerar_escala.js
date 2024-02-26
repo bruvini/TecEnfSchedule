@@ -1,3 +1,26 @@
+// Função para verificar a sessão e as permissões do usuário
+function verificarSessao() {
+  const usuarioLogado = JSON.parse(sessionStorage.getItem("usuarioLogado"));
+
+  // Verifica se o usuário está logado
+  if (
+    !usuarioLogado ||
+    new Date().getTime() - usuarioLogado.timestamp > 600000
+  ) {
+    // 10 minutos em milissegundos
+    window.location.href = "login.html";
+    return;
+  }
+
+  // Verifica se o usuário é do tipo "Funcionário" e redireciona caso seja
+  if (usuarioLogado.tipo === "Funcionário") {
+    window.location.href = "index.html";
+    alert("Você não tem permissão para acessar essa página.");
+  }
+}
+
+verificarSessao();
+
 document.addEventListener("DOMContentLoaded", () => {
   listarUsuarios();
   handleTipoEscalaChange();
@@ -171,4 +194,12 @@ setores.forEach((setor) => {
     linhaTempo.appendChild(horaDiv);
   }
   setorDiv.appendChild(linhaTempo);
+});
+
+document.getElementById('logoutBtn').addEventListener('click', function(event) {
+  event.preventDefault();
+  // Limpa a sessão
+  sessionStorage.removeItem('usuarioLogado');
+  // Redireciona para a página de login
+  window.location.href = 'login.html';
 });

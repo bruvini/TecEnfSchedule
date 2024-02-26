@@ -13,9 +13,13 @@ header {
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li.logout {
+    margin-left: auto; /* Isso empurra o botão de logout para a direita */
 }
 
 nav ul li {
